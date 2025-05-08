@@ -17,6 +17,8 @@ URL:		http://ghdl.free.fr/
 BuildRequires:	gcc-ada >= 6:8.1
 %{?with_llvm:BuildRequires:	llvm-devel >= 6.0}
 %{?with_llvm:BuildRequires:	llvm-devel < 20}
+# contained ghwdump
+Conflicts:	gtkwave < 3.3.110
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
